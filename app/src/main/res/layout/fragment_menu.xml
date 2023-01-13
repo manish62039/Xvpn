@@ -5,12 +5,256 @@
     android:background="@color/white"
     tools:context=".Fragments.MenuFragment">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="30sp"
-        android:gravity="center"
-        android:textColor="@color/red"
-        android:text="Hello Menu Fragment" />
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="133dp"
+            android:id="@+id/menu_top"
+            android:elevation="4dp"
+            android:background="@drawable/main_bottom_nav_bg">
+
+            <ImageView
+                android:id="@+id/img_icon"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/splash_icon" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:layout_toRightOf="@+id/img_icon"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nuntino_bold"
+                    android:text="FireX VPN"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nuntino_medium"
+                    android:text="1.0.0"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/menu_top"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="25dp">
+
+            <RelativeLayout
+                android:id="@+id/Menu_Update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/server_item_bg"
+                android:elevation="2dp"
+                android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                android:paddingVertical="8dp">
+
+                <ImageView
+                    android:id="@+id/img_country3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_menu_update" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/img_country3"
+                    android:fontFamily="@font/nuntino_semibold"
+                    android:lines="1"
+                    android:text="UPDATE"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/Menu_RateApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/server_item_bg"
+                android:elevation="2dp"
+                android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                android:paddingVertical="8dp">
+
+                <ImageView
+                    android:id="@+id/img_country"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_menu_star" />
+
+                <TextView
+                    android:id="@+id/txt_serverName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/img_country"
+                    android:fontFamily="@font/nuntino_semibold"
+                    android:lines="1"
+                    android:text="RATE APP"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/Menu_Share"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/server_item_bg"
+                android:elevation="2dp"
+                android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                android:paddingVertical="8dp">
+
+                <ImageView
+                    android:id="@+id/df"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_menu_share" />
+
+                <TextView
+                    android:id="@+id/dfd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/df"
+                    android:fontFamily="@font/nuntino_semibold"
+                    android:lines="1"
+                    android:text="TELL YOUR FRIEND"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/Menu_Privacy_Policy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/server_item_bg"
+                android:elevation="2dp"
+                android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                android:paddingVertical="8dp">
+
+                <ImageView
+                    android:id="@+id/dfl"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_menu_privacy" />
+
+                <TextView
+                    android:id="@+id/dfdfd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/dfl"
+                    android:fontFamily="@font/nuntino_semibold"
+                    android:lines="1"
+                    android:text="PRIVACY POLICY"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/Menu_How_To_Use"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/server_item_bg"
+                android:elevation="2dp"
+                android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                android:paddingVertical="8dp">
+
+                <ImageView
+                    android:id="@+id/dfdd"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_menu_how_to_use" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/dfdd"
+                    android:fontFamily="@font/nuntino_semibold"
+                    android:lines="1"
+                    android:text="HOW TO USE"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/Menu_About"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/server_item_bg"
+                android:elevation="2dp"
+                android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                android:paddingVertical="8dp">
+
+                <ImageView
+                    android:id="@+id/dfddd"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_menu_about" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/dfddd"
+                    android:fontFamily="@font/nuntino_semibold"
+                    android:lines="1"
+                    android:text="ABOUT"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
 
 </FrameLayout>

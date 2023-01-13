@@ -23,6 +23,7 @@ import com.firex.xvpn.Activities.SplashActivity;
 import com.firex.xvpn.Activities.StartServerActivity;
 import com.firex.xvpn.Adapters.ServersAdapter;
 import com.firex.xvpn.Models.Server;
+import com.firex.xvpn.R;
 import com.firex.xvpn.Utils.PrefManager;
 import com.firex.xvpn.Utils.ServersManager;
 import com.firex.xvpn.Utils.UtilsMethods;

@@ -154,7 +154,7 @@ public class ServersManager {
         Random random = new Random();
 
         for (int i = 0; i < size; i++) {
-            int sleepTime = random.nextInt(TIME_OUT_SERVER * 4) + 10;
+            int sleepTime = random.nextInt(TIME_OUT_SERVER * 1) + 10;
             int finalI = i;
 
             new Thread() {
