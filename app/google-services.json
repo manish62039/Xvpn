@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "954013693180",
+    "project_id": "xvpn-d38d6",
+    "storage_bucket": "xvpn-d38d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:954013693180:android:670e78f095769f713dd379",
+        "android_client_info": {
+          "package_name": "com.firex.xvpn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "954013693180-gc73a9evlngjs27uat8ktqq2m5qbtopp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAJTr7hJcjcW0Z9p3fkfr6O09cn2HBIzU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "954013693180-gc73a9evlngjs27uat8ktqq2m5qbtopp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

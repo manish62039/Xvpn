@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/RL_Parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/server_item_bg"
+    android:elevation="2dp"
+    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+    android:paddingVertical="8dp">
+
+    <ImageView
+        android:id="@+id/img_country"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/australia" />
+
+    <TextView
+        android:id="@+id/txt_serverName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/img_country"
+        android:fontFamily="@font/nuntino_semibold"
+        android:lines="1"
+        android:text="Australia563"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/txt_serverName"
+        android:layout_alignBottom="@+id/txt_serverName"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="2dp"
+        android:layout_toStartOf="@+id/checkMarkIcon"
+        android:layout_toEndOf="@+id/txt_serverName">
+
+        <TextView
+            android:id="@+id/txt_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/item_tag_bg"
+            android:fontFamily="@font/nuntino_regular"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="2dp"
+            android:text="Free"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/txt_ping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_serverName"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@id/img_country"
+        android:fontFamily="@font/nuntino_semibold"
+        android:text="70ms"
+        android:textColor="@color/ping_green"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/checkMarkIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/check_mark_icon" />
+
+</RelativeLayout>
