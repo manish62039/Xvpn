@@ -20,6 +20,14 @@ public class PrefManager {
         editor = sharedPreferences.edit();
     }
 
+    public boolean getBoolean(String key, boolean def) {
+        return sharedPreferences.getBoolean(key, def);
+    }
+
+    public void putBoolean(String key, boolean value) {
+        editor.putBoolean(key, value);
+    }
+
     public static PrefManager getInstance(Context c) {
         if (prefManager == null)
             prefManager = new PrefManager(c);

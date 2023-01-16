@@ -23,43 +23,33 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/title"
-            android:foreground="?android:attr/selectableItemBackgroundBorderless"
             android:background="@color/connection_top_status_color"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
             android:paddingVertical="10dp">
 
             <TextView
+                android:id="@+id/txt_status_serverName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="16dp"
                 android:fontFamily="@font/nuntino_semibold"
                 android:text="Connected to Japan56"
-                android:id="@+id/txt_status_serverName"
                 android:textColor="@color/white"
                 android:textSize="15sp" />
 
             <TextView
+                android:id="@+id/txt_status_duration"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="7dp"
-                android:layout_toStartOf="@id/ic_arrow"
-                android:fontFamily="@font/nuntino_semibold"
-                android:text="00:02:54"
-                android:id="@+id/txt_status_duration"
-                android:textColor="@color/white"
-                android:textSize="15sp" />
-
-            <ImageView
-                android:id="@+id/ic_arrow"
-                android:layout_width="12dp"
-                android:layout_height="12dp"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:layout_marginEnd="7dp"
-                android:layout_marginTop="4dp"
-                android:src="@drawable/right_arrow" />
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/nuntino_semibold"
+                android:text="00:02:54"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
 
         </RelativeLayout>
 

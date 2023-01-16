@@ -7,11 +7,6 @@
     <string name="select_server">Select Server</string>
 
 
-
-
-
-
-
     <string name="app">OpenVPN for Android</string>
     <string name="address">Server Address:</string>
     <string name="port">Server Port:</string>
@@ -242,7 +237,7 @@
     <string name="minidump_generated">OpenVPN crashed unexpectedly. Please consider using the send Minidump option in the main menu</string>
     <string name="send_minidump">Send Minidump to developer</string>
     <string name="send_minidump_summary">Sends debugging information about last crash to developer</string>
-    <string name="notifcation_title">Liberty VPN - %s</string>
+    <string name="notifcation_title">FireX VPN - %s</string>
     <string name="session_ipv4string">%1$s - %2$s</string>
     <string name="session_ipv6string">%1$s - %3$s, %2$s</string>
     <string name="state_connecting">Connecting</string>
@@ -507,5 +502,11 @@
     <string name="import_from_as">Import Profile from Access Server</string>
     <string name="no_default_vpn_set">Default VPN not set. Please set the Default VPN before enabling this option.</string>
     <string name="internal_web_view">Internal WebView</string>
+
+    <string name="how_to_use_msg">Click on any server listed in HomePage to Connect. It will take a few seconds to connect. Then enjoy your favorite movies and games.</string>
+    <string name="how_to_use_title">How to use?</string>
+
+   <string name="About_title">About</string>
+   <string name="About_msg">Version - 1.0\nDeveloper - FireX</string>
 
 </resources>

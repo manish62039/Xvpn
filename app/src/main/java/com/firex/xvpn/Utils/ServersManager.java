@@ -26,19 +26,15 @@ public class ServersManager {
     private static ServersManager instance;
     private final String TAG = "Filter_ServersManager";
     private List<Server> servers;
-    private FirebaseDatabase firebaseDatabase;
-    private InputStream txtFile;
-    private PrefManager prefManager;
+    private final InputStream txtFile;
+    private final PrefManager prefManager;
     private static PingCompleteListner pingingCompletedListener;
     private final int TIME_OUT_SERVER = 1000;
-    private Context context;
 
     public ServersManager(Context context) {
         Log.i(TAG, "ServersManager: StartingServerManager");
         prefManager = PrefManager.getInstance(context);
         txtFile = context.getResources().openRawResource(R.raw.servers_list);
-        firebaseDatabase = FirebaseDatabase.getInstance();
-        this.context = context;
 
         new Thread() {
             @Override
