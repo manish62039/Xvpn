@@ -84,10 +84,7 @@ public class SplashActivity extends AppCompatActivity {
         Log.i("CRASH", "initServerManager: " + ServersManager.isAlreadyStarted());
         if (ServersManager.isAlreadyStarted()) {
 
-            runOnUiThread(() -> new Handler().postDelayed(() -> {
-                startActivity(intent);
-                finish();
-            }, 1000));
+            runOnUiThread(() -> new Handler().postDelayed(this::start, 1000));
 
         } else {
             serversManager = ServersManager.getInstance(this);
@@ -100,11 +97,15 @@ public class SplashActivity extends AppCompatActivity {
                     Log.i("SplashScreen", "completedIn: " + (System.currentTimeMillis() - startTime));
                     ServersManager.removePingingCompletedListener();
 
-                    startActivity(intent);
-                    finish();
+                    start();
                 }
             });
         }
+    }
+
+    private void start(){
+        startActivity(intent);
+        finish();
     }
 
 }

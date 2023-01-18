@@ -49,6 +49,7 @@ public class StartServerActivity extends AppCompatActivity {
     private String serverName;
     private boolean isProcessShowing = false;
     private boolean vpnStart = false;
+    private long lastBackPressed = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,6 +117,14 @@ public class StartServerActivity extends AppCompatActivity {
     public void onBackPressed() {
         if (isProcessShowing) {
             stopVpn();
+        } else if (vpnStart) {
+            if (System.currentTimeMillis() - lastBackPressed < 2000) {
+                stopVpn();
+            } else {
+                Toast.makeText(context, "Press again to disconnect!", Toast.LENGTH_SHORT).show();
+                lastBackPressed = System.currentTimeMillis();
+                return;
+            }
         }
         super.onBackPressed();
         finish();
