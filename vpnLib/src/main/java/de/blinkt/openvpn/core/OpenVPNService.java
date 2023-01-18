@@ -21,6 +21,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.ShortcutManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.VpnService;
@@ -41,6 +42,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+import androidx.core.content.ContextCompat;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import java.io.IOException;
@@ -314,10 +316,12 @@ public class OpenVPNService extends VpnService implements StateListener, Callbac
         else
             nBuilder.setContentTitle(getString(R.string.notifcation_title_notconnect));
 
+
+
         nBuilder.setContentText(msg);
         nBuilder.setOnlyAlertOnce(true);
         nBuilder.setOngoing(true);
-        nBuilder.setSmallIcon(R.drawable.ic_notification);
+        nBuilder.setSmallIcon(R.drawable.ic_baseline_vpn_key_24);
         if (status == LEVEL_WAITING_FOR_USER_INPUT) {
             PendingIntent pIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
             nBuilder.setContentIntent(pIntent);
@@ -335,10 +339,8 @@ public class OpenVPNService extends VpnService implements StateListener, Callbac
 
 
         // Try to set the priority available since API 16 (Jellybean)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-            jbNotificationExtras(priority, nBuilder);
-            addVpnActionsToNotification(nBuilder);
-        }
+        jbNotificationExtras(priority, nBuilder);
+        addVpnActionsToNotification(nBuilder);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
             lpNotificationExtras(nBuilder, Notification.CATEGORY_SERVICE);
@@ -444,24 +446,26 @@ public class OpenVPNService extends VpnService implements StateListener, Callbac
     private void addVpnActionsToNotification(Notification.Builder nbuilder) {
         Intent disconnectVPN = new Intent(this, DisconnectVPNActivity.class);
         disconnectVPN.setAction(DISCONNECT_VPN);
-        PendingIntent disconnectPendingIntent = PendingIntent.getActivity(this, 0, disconnectVPN, PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent disconnectPendingIntent = PendingIntent.getActivity(this, 0, disconnectVPN,  PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
 
         nbuilder.addAction(R.drawable.ic_menu_close_clear_cancel,
                 getString(R.string.cancel_connection), disconnectPendingIntent);
 
-        Intent pauseVPN = new Intent(this, OpenVPNService.class);
-        if (mDeviceStateReceiver == null || !mDeviceStateReceiver.isUserPaused()) {
-            pauseVPN.setAction(PAUSE_VPN);
-            PendingIntent pauseVPNPending = PendingIntent.getService(this, 0, pauseVPN, PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
-            nbuilder.addAction(R.drawable.ic_menu_pause,
-                    getString(R.string.pauseVPN), pauseVPNPending);
+        nbuilder.setColor(ContextCompat.getColor(this,R.color.notification_color));
 
-        } else {
-            pauseVPN.setAction(RESUME_VPN);
-            PendingIntent resumeVPNPending = PendingIntent.getService(this, 0, pauseVPN, PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
-            nbuilder.addAction(R.drawable.ic_menu_play,
-                    getString(R.string.resumevpn), resumeVPNPending);
-        }
+//        Intent pauseVPN = new Intent(this, OpenVPNService.class);
+//        if (mDeviceStateReceiver == null || !mDeviceStateReceiver.isUserPaused()) {
+//            pauseVPN.setAction(PAUSE_VPN);
+//            PendingIntent pauseVPNPending = PendingIntent.getService(this, 0, pauseVPN, PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
+//            nbuilder.addAction(R.drawable.ic_menu_pause,
+//                    getString(R.string.pauseVPN), pauseVPNPending);
+//
+//        } else {
+//            pauseVPN.setAction(RESUME_VPN);
+//            PendingIntent resumeVPNPending = PendingIntent.getService(this, 0, pauseVPN, PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
+//            nbuilder.addAction(R.drawable.ic_menu_play,
+//                    getString(R.string.resumevpn), resumeVPNPending);
+//        }
     }
 
     PendingIntent getUserInputIntent(String needed) {
