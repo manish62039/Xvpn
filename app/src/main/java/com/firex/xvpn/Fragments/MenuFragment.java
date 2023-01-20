@@ -49,6 +49,8 @@ public class MenuFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        Log.i("StartingFragment", "Menu");
+
         binding = FragmentMenuBinding.inflate(inflater, container, false);
         context = binding.getRoot().getContext();
         prefManager = PrefManager.getInstance(context);

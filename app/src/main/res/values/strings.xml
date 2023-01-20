@@ -507,6 +507,7 @@
     <string name="how_to_use_title">How to use?</string>
 
    <string name="About_title">About</string>
-   <string name="About_msg">Version - 1.0\nDeveloper - FireX</string>
+   <string name="About_msg">Version - 1.0.0\nDeveloper - FireX</string>
+    <string name="connected">Connected</string>
 
 </resources>

@@ -74,4 +74,13 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 
+    @Override
+    public void onBackPressed() {
+        if (currentIndex == 1) {
+            selectFragment(0);
+            return;
+        }
+
+        super.onBackPressed();
+    }
 }

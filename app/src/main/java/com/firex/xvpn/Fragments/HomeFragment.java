@@ -47,7 +47,7 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         context = binding.getRoot().getContext();
 
-        Log.i(TAG, "onCreateView: Starting Home Fragment!");
+        Log.i("StartingFragment", "Home");
         prefManager = PrefManager.getInstance(context);
 
         binding.btnMoreServers.setOnClickListener(view -> {

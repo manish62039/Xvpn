@@ -79,8 +79,11 @@ public class ServersAdapter extends RecyclerView.Adapter<ServersAdapter.ViewHold
         if (isFromHome) {
             if (position == 1 || position == 2)
                 tag = "Good";
-            else if (position > 2)
+            else if (position > 2) {
                 tag = "Last Used";
+                if (prefManager.getLastUsed(s.getIpAddress()) == 0L)
+                    tag = "good";
+            }
         } else {
             if (position > 0 && position < 9)
                 tag = "Good";
@@ -98,12 +101,11 @@ public class ServersAdapter extends RecyclerView.Adapter<ServersAdapter.ViewHold
 
         if (connectedServer != null && !connectedServer.isEmpty() && finalServerName.equals(connectedServer)) {
             holder.checkMark.setImageResource(R.drawable.check_mark_icon_selected);
-            holder.txtTag.setText("Connected");
-            holder.txtTag.setBackground(ContextCompat.getDrawable(context,R.drawable.item_tag_bg_connected));
-        }
-        else {
+            holder.txtTag.setText(context.getString(R.string.connected));
+            holder.txtTag.setBackground(ContextCompat.getDrawable(context, R.drawable.item_tag_bg_connected));
+        } else {
             holder.checkMark.setImageResource(R.drawable.check_mark_icon);
-            holder.txtTag.setBackground(ContextCompat.getDrawable(context,R.drawable.item_tag_bg));
+            holder.txtTag.setBackground(ContextCompat.getDrawable(context, R.drawable.item_tag_bg));
         }
     }
 

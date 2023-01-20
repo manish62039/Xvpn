@@ -150,7 +150,7 @@ public class ServersManager {
         Random random = new Random();
 
         for (int i = 0; i < size; i++) {
-            int sleepTime = random.nextInt(TIME_OUT_SERVER * 1) + 10;
+            int sleepTime = random.nextInt(TIME_OUT_SERVER * 3) + 10;
             int finalI = i;
 
             new Thread() {
@@ -208,6 +208,13 @@ public class ServersManager {
                 return (int) (prefManager.getLastUsed(t2.getIpAddress()) - prefManager.getLastUsed(t1.getIpAddress()));
             }
         });
+
+        for (Server s : list) {
+            if (usedServers.size() > 5)
+                return usedServers;
+            else if (!usedServers.contains(s) && !s.getCountryShort().equals("VN") && !s.getCountryShort().equals("KR"))
+                usedServers.add(s);
+        }
 
         for (Server s : list) {
             if (usedServers.size() > 5)
