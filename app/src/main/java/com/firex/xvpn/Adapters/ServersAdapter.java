@@ -56,7 +56,7 @@ public class ServersAdapter extends RecyclerView.Adapter<ServersAdapter.ViewHold
         holder.txt_serverName.setText(finalServerName);
 
         //Ping
-        int ping = s.getPing() / 2;
+        int ping = s.getPing() / 3;
         int colorCode = context.getColor(R.color.ping_red);
         if (ping < 200)
             colorCode = context.getColor(R.color.ping_green);

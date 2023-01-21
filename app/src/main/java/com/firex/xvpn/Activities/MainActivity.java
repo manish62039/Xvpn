@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 
+import com.firex.xvpn.Dialogs.CustomReviewManager;
 import com.firex.xvpn.Fragments.HomeFragment;
 import com.firex.xvpn.Fragments.MenuFragment;
 import com.firex.xvpn.R;
@@ -48,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         selectFragment(0);
+
+        new CustomReviewManager(this).showIfNotRated();
     }
 
     private void selectFragment(int index) {

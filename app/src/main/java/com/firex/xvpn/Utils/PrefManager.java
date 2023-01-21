@@ -25,7 +25,7 @@ public class PrefManager {
     }
 
     public void putBoolean(String key, boolean value) {
-        editor.putBoolean(key, value);
+        editor.putBoolean(key, value).apply();
     }
 
     public static PrefManager getInstance(Context c) {

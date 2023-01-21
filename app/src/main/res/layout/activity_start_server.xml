@@ -66,7 +66,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/nuntino_medium"
-                            android:text="Uploaded"
+                            android:text="@string/uploaded"
                             android:textColor="@color/black"
                             android:textSize="15sp" />
 
@@ -76,7 +76,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:fontFamily="@font/nuntino_medium"
-                            android:text="0MB"
+                            android:text="@string/_0mb_txt"
                             android:textColor="@color/black"
                             android:textSize="14sp" />
 
@@ -124,7 +124,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/nuntino_medium"
-                            android:text="Downloaded"
+                            android:text="@string/downloaded"
                             android:textColor="@color/black"
                             android:textSize="15sp" />
 
@@ -134,7 +134,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:fontFamily="@font/nuntino_medium"
-                            android:text="0MB"
+                            android:text="@string/_0mb"
                             android:textColor="@color/black"
                             android:textSize="14sp" />
 
@@ -190,7 +190,7 @@
                 android:layout_marginEnd="10dp"
                 android:fontFamily="@font/nuntino_semibold"
                 android:lines="1"
-                android:text="Connecting to Australia563"
+                android:text="@string/connecting_to_australia563"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
         </LinearLayout>
@@ -214,7 +214,7 @@
             android:fontFamily="@font/nuntino_regular"
             android:paddingHorizontal="14dp"
             android:paddingVertical="6dp"
-            android:text="00:00:00"
+            android:text="@string/_00_00_00"
             android:id="@+id/txt_timer"
             android:textColor="@color/white" />
 

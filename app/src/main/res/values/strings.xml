@@ -507,7 +507,32 @@
     <string name="how_to_use_title">How to use?</string>
 
    <string name="About_title">About</string>
-   <string name="About_msg">Version - 1.0.0\nDeveloper - FireX</string>
+   <string name="About_msg">Version - 1.0.1\nDeveloper - FireX</string>
     <string name="connected">Connected</string>
+    <string name="firex_vpn">FireX VPN</string>
+    <string name="_1_0_1">1.0.1</string>
+    <string name="update_app">UPDATE APP</string>
+    <string name="abou">ABOUT</string>
+    <string name="_00_02_54">00:02:54</string>
+    <string name="connected_to_japan56">Connected to Japan56</string>
+    <string name="_00_00_00">00:00:00</string>
+    <string name="connecting_to_australia563">Connecting to Australia563</string>
+    <string name="_0mb">0MB</string>
+    <string name="downloaded">Downloaded</string>
+    <string name="_0mb_txt">0MB</string>
+    <string name="uploaded">Uploaded</string>
+    <string name="more_servers">MORE SERVERS</string>
+    <string name="rate_app">RATE APP</string>
+    <string name="tell_your_friend">TELL YOUR FRIEND</string>
+    <string name="privacy_policy">PRIVACY POLICY</string>
+    <string name="how_to_use">HOW TO USE</string>
+    <string name="australia563">Australia563</string>
+    <string name="free">Free</string>
+    <string name="_70ms">70ms</string>
+    <string name="how_to_use_text_msg">how to use text msg</string>
+    <string name="ok">OK</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="like_this_vpn_app_rate_us_with_5_stars">Like this VPN App? Rate Us with 5 stars.</string>
+    <string name="rate_app2">RATE APP</string>
 
 </resources>

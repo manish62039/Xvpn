@@ -52,7 +52,7 @@
             android:layout_centerVertical="true"
             android:layout_marginStart="16dp"
             android:fontFamily="@font/nuntino_semibold"
-            android:text="Connected to Japan56"
+            android:text="@string/connected_to_japan56"
             android:textColor="@color/white"
             android:textSize="15sp" />
 
@@ -64,7 +64,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:fontFamily="@font/nuntino_semibold"
-            android:text="00:02:54"
+            android:text="@string/_00_02_54"
             android:layout_alignParentEnd="true"
             android:textColor="@color/white"
             android:textSize="15sp" />

@@ -36,7 +36,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nuntino_bold"
-                    android:text="FireX VPN"
+                    android:text="@string/firex_vpn"
                     android:textColor="@color/white"
                     android:textSize="22sp" />
 
@@ -44,7 +44,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nuntino_medium"
-                    android:text="1.0.0"
+                    android:text="@string/_1_0_1"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
 
@@ -92,7 +92,7 @@
                         android:layout_toEndOf="@id/img_country3"
                         android:fontFamily="@font/nuntino_semibold"
                         android:lines="1"
-                        android:text="UPDATE APP"
+                        android:text="@string/update_app"
                         android:textColor="@color/black"
                         android:textSize="18sp" />
 
@@ -125,7 +125,7 @@
                         android:layout_toEndOf="@id/img_country"
                         android:fontFamily="@font/nuntino_semibold"
                         android:lines="1"
-                        android:text="RATE APP"
+                        android:text="@string/rate_app"
                         android:textColor="@color/black"
                         android:textSize="18sp" />
 
@@ -158,7 +158,7 @@
                         android:layout_toEndOf="@id/df"
                         android:fontFamily="@font/nuntino_semibold"
                         android:lines="1"
-                        android:text="TELL YOUR FRIEND"
+                        android:text="@string/tell_your_friend"
                         android:textColor="@color/black"
                         android:textSize="18sp" />
 
@@ -191,7 +191,7 @@
                         android:layout_toEndOf="@id/dfl"
                         android:fontFamily="@font/nuntino_semibold"
                         android:lines="1"
-                        android:text="PRIVACY POLICY"
+                        android:text="@string/privacy_policy"
                         android:textColor="@color/black"
                         android:textSize="18sp" />
 
@@ -224,7 +224,7 @@
                         android:layout_toEndOf="@id/dfdd"
                         android:fontFamily="@font/nuntino_semibold"
                         android:lines="1"
-                        android:text="HOW TO USE"
+                        android:text="@string/how_to_use"
                         android:textColor="@color/black"
                         android:textSize="18sp" />
 
@@ -257,7 +257,7 @@
                         android:layout_toEndOf="@id/dfddd"
                         android:fontFamily="@font/nuntino_semibold"
                         android:lines="1"
-                        android:text="ABOUT"
+                        android:text="@string/abou"
                         android:textColor="@color/black"
                         android:textSize="18sp" />
 

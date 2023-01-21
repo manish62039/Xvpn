@@ -65,7 +65,9 @@ public class MenuFragment extends Fragment {
         binding.MenuRateApp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showInAppReview();
+                prefManager.putBoolean("isAlreadyRated", true);
+                playStore(context);
+//                showInAppReview();
             }
         });
 
@@ -140,7 +142,7 @@ public class MenuFragment extends Fragment {
 
         checkForUpdates();
         showRateMenu();
-        activateReviewInfo();
+//        activateReviewInfo();
     }
 
     public void playStore(Context context) {
