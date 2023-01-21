@@ -82,7 +82,7 @@ public class ServersAdapter extends RecyclerView.Adapter<ServersAdapter.ViewHold
             else if (position > 2) {
                 tag = "Last Used";
                 if (prefManager.getLastUsed(s.getIpAddress()) == 0L)
-                    tag = "good";
+                    tag = "Good";
             }
         } else {
             if (position > 0 && position < 9)
